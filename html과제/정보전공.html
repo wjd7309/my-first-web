@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+
+		<title>백석문화대학교 컴퓨터 정보학부</title>
+
+		<style>
+
+			*{
+
+				margin: 0; padding: 0;
+
+				font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
+
+			}
+
+			a {text-decoration: none;}
+
+			li {list-style: none;}
+        
+
+			body {
+
+				width: 960px; margin: 0 auto;
+
+				background: #E6E6E6;
+
+				}
+
+			#page-wrapper{
+
+				background: white;
+
+				margin: 40px 0; padding: 10px 20px;
+
+				border-radius: 5px;
+
+				box-shadow: 0 4px 10px rgba(100, 100, 100, 0.3);
+
+			}
+
+			#main-header{padding: 40px 50px;}
+
+			.master-title{
+
+				font-size: 23px;
+
+				color: #181818;
+
+			}
+
+			.master-description{
+
+				font-size: 15px; font-weight: 500;
+
+				color: #383838;
+
+			}
+
+			
+
+			#main-navigation{
+
+				border-top: 1px solid #C8C8C8;
+
+				border-bottom: 1px solid #C8C8C8;
+
+				margin-bottom: 20px;
+
+				height: 40px;
+
+			}
+
+			.pull-left{float: left;}
+
+			.outer-menu-item{
+
+				float: left;
+
+				position: relative;
+
+			}
+
+			.menu-title{
+
+				display: block;
+
+				height: 30px; line-height: 30px;
+
+				text-align: center;
+
+				padding: 5px 20px;
+
+			}
+
+			.outer-menu-item:hover{
+
+				background:black;
+
+				color: white;
+
+			}
+
+			.pull-right{float:right;}
+
+			.search-bar{
+
+				height: 26px;
+
+				padding: 7px;
+
+			}
+
+			.input-search{
+
+				display: block;
+
+				float: left;
+
+				
+
+				background-color: #FFFFFF;
+
+				border: 1px solid #CCCCCC;
+
+				border-radius: 15px 0 0 15px;
+
+				box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+
+				
+
+				width: 120px; height: 24px;
+
+				padding: 0 0 0 10px;
+
+				font-size: 12px;
+
+				color: #555555;
+
+			}
+
+			.input-search-submit{
+
+				display: block;
+
+				float: left;
+
+				
+
+				width: 50px; height: 26px;
+
+				border-radius: 0 15px 15px 0;
+
+				border: 1px solid #CCCCCC;
+
+				
+
+				margin-left: -1px;
+
+				vertical-align: top;
+
+				display: inline-block;
+
+			}
+
+			.input-search:focus{
+
+				border-color: rgba(82,168,236, 0.8);
+
+				outline: 0;
+
+				box-shadow: inset 0 1px 1px rgba(0,0,0, 0.05);
+
+			}
+
+			.inner-menu{
+
+				display: none;
+
+				position: absolute;
+
+				top: 40px; left: 0;
+
+				width: 100%;
+
+				
+
+				background: white;
+
+				box-shadow: 0 2px 6px rgba(5,5,5, 0.9);
+
+				z-index: 1000;
+
+				
+
+				text-align: center;
+
+			}
+
+			.inner-menu-item > a {
+
+				display: block;
+
+				padding: 5px 10px;
+
+				color: black;
+
+			}
+
+			.inner-menu-item > a:hover{
+
+				background: black;
+
+				color: white;
+
+			}
+
+
+
+			#content{
+
+				overflow: hidden;
+
+				padding: 0 50px;
+
+			}
+
+			#main-section{
+
+				float: left;
+
+				width: 510px;
+
+			}
+
+			#main-aside{
+
+				float: right;
+
+				width: 200px;
+
+			}
+
+			article{
+
+				padding: 0 10px 20px 10px;
+
+				border-bottom: 1px solid #C8C8C8;
+
+			}
+
+			.article-header{padding: 20px 0;}
+
+			.article-title{
+
+				font-size: 25px;
+
+				font-weight: 500;
+
+				padding-bottom: 10px;
+
+			}
+
+			.article-date{font-size: 13px;}
+
+			.article-body{font-size: 14px;}
+
+			
+
+			.aside-list{padding: 10px 0 30px 0;}
+
+			.aside-list > h3{
+
+				font-size: 15px;
+
+				font-weight: 600;
+
+			}
+
+			.aside-list li a{
+
+				margin-left: 8px;
+
+				font-size: 13px;
+
+				color: #6C6C6C;
+
+			}
+
+			#main-footer{
+
+				padding: 10px 50px;
+
+			}
+
+		</style>
+
+		
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function () {
+
+				$('.outer-menu-item').hover(function () {
+
+					$(this).find('.inner-menu').show();
+
+					}, function () {
+
+				$(this).find('.inner-menu').hide();
+
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+	
+
+	<body>
+
+		<div id="page-wrapper">
+
+			<header id="main-header">
+
+				<hgroup>
+
+					<h1 class="master-title">백석문화대학교</h1>
+
+					<h2 class="master-description">컴퓨터 정보학부</h2>
+
+				</hgroup>
+
+				<nav id="main-navigation">
+
+					<div class="pull-left">
+
+						<ul class="outer-menu">
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title">학과 소개</span>
+
+								<ul class="inner-menu">
+
+									<li class="inner-menu-item"><a href="#">정보 학과</a></li>
+
+									<li class="inner-menu-item"><a href="file:///C:/Users/gram/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%EA%B2%8C%EC%9E%84%EC%A0%84%EA%B3%B5.html">게임 학과</a></li>
+
+								</ul>
+
+							</li>
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title">교수진</span>
+
+                                <ul class="inner-menu">
+                                    
+                                    <li class="inner-menu-item"><a href="#">교수 소개</a></li>
+
+                                </ul>
+
+							</li>
+
+							<li class="outer-menu-item">
+
+								<span class="menu-title">찾아오시는 길</span>
+
+                                <ul class="inner-menu">
+                                    
+                                    <li class="inner-menu-item"><a href ="https://www.bscu.ac.kr/web/2513/subview.do">웹 사이트</a></li>
+                                
+                                </ul>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+					<div class="pull-right">
+
+						<div class="search-bar">
+
+							<form>
+
+								<input type="text" class="input-search" />
+
+								<input type="submit" class="input-search-submit" value="Search" />
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</nav>
+
+			</header>
+
+			<div id="content">
+
+				<section id="main-section">
+
+					<article>
+
+						<div class="article-header">
+
+							<h1 class="article-title">컴퓨터정보학부(컴퓨터정보전공)</h1>
+
+							<h2><p class="article-date">학부(과)소개</p></h2>
+
+						</div>
+
+						<div class="article-body">
+
+							<img src="https://ifh.cc/g/xsoyd4.jpg" />
+
+                            
+                            <br>
+                            <br>
+
+							
+                                <p>IT 전문가로서 기독교 정신을 바탕으로 올바른 인성을 함양하고, 학생의 능력과 잠재력을
+									개발하여 디지털정보사회의 핵심 역할을 담당하는 전문직업인 양성을 목표로 한다.</p>
+
+                                    <br>
+                                <p>    
+                                    이를 위해 산업체 요구를 반영한 다변화되고 능동적인 교육과정을 운영하고 자기 주도적 학습자 환경을 제공하여 이론과 실무에 있어 빠른 적응력과 창의력을 겸비한 IT 전문 인력을 배출한다.
+                                
+                                </p>
+
+                                <br>
+							   
+                                <p>본 학부에서는 보다 전문화된 교육을 위해 컴퓨터정보와 컴퓨터게임의 2개 세부전공을 두고 있으며, 전공별 특성에 따른 교과과정 편성하고 현장수준의 첨단 실습기자재를 확충ㆍ유지하고 있으며<br/>
+									 현장 실무형 프로젝트 수업방식으로 학습효과를 제고하고 있다.</p>
+							
+
+
+
+
+							<br />
+
+
+						
+					
+					</div>
+
+				</article>
+
+                <article>
+
+                    <div class="article-header">
+
+                        <h1 class="article-title">전공소개</h1>
+
+                       
+                     
+                    
+
+                    </div>
+
+                    <div class="article-body">
+
+                        <img src="https://ifh.cc/g/xsoyd4.jpg" />
+
+                        <br>
+                        <br>
+
+                        <p>4차 산업혁명 시대를 선도하는 진정한 프로!<br>
+                            컴퓨터 정보 기술을 바탕으로 형성된 21세기 지식 정보화 시대의 요구에 부응하기 위해
+                            컴퓨터정보전공은 체계적인 프로그래밍 교육을 기반으로 실무 능력을 갖춘 신학 밀착형 SW 엔지니어 양성을 목표로 한다.
+                        </p>
+
+                        <br>
+
+                        <h2>관련 자격증</h2>
+                        <p>컬러리스트기사</p>
+                        <p>정보처리기사</p>
+                        <p>정보처리산업기사</p>
+                        <p>컬러리스트산업기사</p>
+                        <p>컴퓨터그래픽스운영기능사</p>
+                        <p>정보처리기능사</p>
+                        <p>웹디자인기능사</p>
+                        <p>멀티미디어콘텐츠제작전문가</p>
+                        <p>게임그래픽전문가</p>
+                        <p>게임기획전문가</p>
+                        <p>게임프로그래밍전문가</p>
+            
+                        <br>
+            
+                        <h2>졸업후 진로</h2>
+                        <p>출판 분야 업체</p>
+                        <p>만화 분야 업체</p>
+                        <p>음악 분야 업체</p>
+                        <p>영화 분야 업체</p>
+                        <p>게임 분야 업체</p>
+                        <p>애니메이션 분야 업체</p>
+                        <p>방송 분야 업체</p>
+                        <p>캐릭터 분야 업체</p>
+
+
+                    
+                
+                </div>
+
+            </article>
+
+                  
+
+				</section>
+
+				<aside id = "main-aside">
+
+					<div class="aside-list">
+
+						<h3>공지사항</h3>
+
+						<ul>
+
+							<li><a href="https://www.bscu.ac.kr/computer/1776/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1OTMlMkYxOTE0MSUyRmFydGNsVmlldy5kbyUzRg%3D%3D"> 2022-2학기 서비스인성(다빈치아카데미 포함) 재 수강안내   09.01</a></li>
+							
+								<br>
+
+							<li><a href="https://www.bscu.ac.kr/computer/1776/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1OTMlMkYxOTEyNSUyRmFydGNsVmlldy5kbyUzRg%3D%3D">2022학년도 2학기 온라인 창업강좌(창업마인드함양) 수강안내</a></li>
+
+								<br>
+							
+							<li><a href="https://www.bscu.ac.kr/computer/1776/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1OTMlMkYxOTA2MiUyRmFydGNsVmlldy5kbyUzRg%3D%3D">(중요) 2022-2학기 개강안내사항 안내   08.31</a></li>
+								
+								<br>
+							
+							<li><a href="https://www.bscu.ac.kr/computer/1776/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1OTMlMkYxODkyMiUyRmFydGNsVmlldy5kbyUzRg%3D%3D">2022학년도 2학기 수강신청 안내   08.11</a></li>
+
+						</ul>
+
+					</div>
+
+					<div class="aside-list">
+
+						<h3>자유게시판</h3>
+
+						<ul>
+
+							<li><a href="https://www.bscu.ac.kr/computer/1782/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1ODAlMkYxODA3NCUyRmFydGNsVmlldy5kbyUzRg%3D%3D">2022 교사대생 등 대학생 튜터링 사업(구 대청교)_(3차) 모집공고 안내   04.12</a></li>
+								
+								<br>
+							
+							<li><a href="https://www.bscu.ac.kr/computer/1782/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1ODAlMkYxNzk1NCUyRmFydGNsVmlldy5kbyUzRg%3D%3D">2022 교사대생 등 대학생 튜터링 사업(구 대청교)_모집공고 안내   03.31	</a></li>
+
+								<br>
+							
+							<li><a href="https://www.bscu.ac.kr/computer/1782/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1ODAlMkYxNzc2MCUyRmFydGNsVmlldy5kbyUzRg%3D%3D">창조관 2층 도서관 '자유열람실'을 개방하였습니다   03.10	</a></li>
+
+								<br>
+							
+							<li><a href="https://www.bscu.ac.kr/computer/1782/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY29tcHV0ZXIlMkY1ODAlMkYxNTYzNSUyRmFydGNsVmlldy5kbyUzRg%3D%3D">장애학생지원센터 장애체험 및 장애인식 개선캠페인 안내   10.31</a></li>
+
+						</ul>
+
+					</div>
+
+				</aside>
+
+			</div>			
+
+			<footer id="main-footer">
+
+				31065 충청남도 천안시 동남구 백석대학로 1, 백석문화대학교 전화 : 041-550-0700
+COPYRIGHT 2020. BAEKSEOK CULTURE UNIVERSITY. All rights reserved.
+
+			</footer>
+
+		</div>
+
+	</body>
+
+</html>
+
